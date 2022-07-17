@@ -1,0 +1,18 @@
+﻿<htnml>
+    <header>
+        <link rel="stylesheet" href="index.css">
+        <script src="settings.js"></script>
+        <script src="index.js"></script>
+    </header>
+    <body onresize="ResetSize()">
+        <div id="video_panel">
+            <iframe src="https://www.youtube.com/embed/cmkAbDUEoyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div id="cover">
+            <button class="controlButton" onclick="SwitchToLastCamera()"></button>
+            <button class="controlButton"onclick="ToggleCameraLoop()"></button>
+            <button class="controlButton" onclick="SwitchToNextCamera()"></button>
+        </div>
+        <div id="desc"><p id="descText">Description</p></div>
+    </body>
+</htnml>
