@@ -58,5 +58,29 @@ var cameras = [
       width: 560,
       height: 315,
       source: "https://www.webcamtaxi.com/en/italy/veneto/venice-lidojesolo-chioscoveliero-cam.html"
+  },
+  {
+    type: "Youtube",
+    Description: "Live - Centro Vacanze Pra' delle Torri",
+    url: "https://www.youtube.com/embed/akdW-Hf_R2Q",
+    width: 560,
+    height: 315,
+    source: "https://www.webcamtaxi.com/en/italy/veneto/venice-centro-vacanze-pradelletorri-cam.html"
+  },
+  {
+    type: "Youtube",
+    Description: "Neo Karlovasi Cam, Samos Island",
+    url: "https://www.youtube.com/embed/DY0Iyprkau4",
+    width: 560,
+    height: 315,
+    source: "https://www.webcamtaxi.com/en/greece/north-aegean/north-aegean.html"
+  },
+  {
+    type: "Youtube",
+    Description: "東京都 新宿 歌舞伎町 24時間 ",
+    url: "https://www.youtube.com/embed/DjdUEyjx8GM",
+    width: 560,
+    height: 315,
+    source: "https://www.webcamtaxi.com/en/japan/tokyo/kabukicho-shinjuku-cam.html"
   }
 ];
