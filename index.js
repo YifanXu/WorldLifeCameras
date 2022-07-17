@@ -26,8 +26,9 @@ function SetVideoSize() {
 }
 
 function SwitchToCamera(cameraIdToSwitch) {
-  descText.innerText = cameras[cameraIdToSwitch].Description
-  videoFrame.src = cameras[cameraIdToSwitch].url + "?autoplay=1&mute=1";
+  var currentCamera = cameras[cameraIdToSwitch];
+  descText.innerText = "[" + currentCamera.category + "] " + currentCamera.Description
+  videoFrame.src = currentCamera.url + "?autoplay=1&mute=1";
 }
 
 function SwitchToNextCamera() {
