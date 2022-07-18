@@ -49,7 +49,7 @@ function SwitchToNextCamera() {
 
 function SwitchToLastCamera() {
   if (cameraIntervalId) {
-    stopCameraLoop()
+    StopCameraLoop()
   }
   cameraId--;
   if (cameraId < 0) {
@@ -61,22 +61,23 @@ function SwitchToLastCamera() {
 
 function ToggleCameraLoop() {
   if (cameraIntervalId) {
-    stopCameraLoop()
+    StopCameraLoop()
   }
   else {
     StartCameraLoop()
   }
 }
 
-function StartCameraLoop() {
-  cameraIntervalId = setInterval(SwitchToNextCamera, cameraInterval);
-}
-
-function stopCameraLoop() {
+function StopCameraLoop() {
   if (cameraIntervalId) {
       clearInterval(cameraIntervalId);
       cameraIntervalId = null;
   }
+}
+
+function StartCameraLoop() {
+  StopCameraLoop();
+  cameraIntervalId = setInterval(SwitchToNextCamera, cameraInterval);
 }
 
 function ResetSize() {
@@ -102,6 +103,7 @@ function ResetSize() {
 }
 
 window.onload = function () {
+  ResetSize();
   playerElement = document.getElementById('player')
 
   var tag = document.createElement('script');
@@ -111,14 +113,13 @@ window.onload = function () {
 
   descText = document.getElementById('descText')
   console.log(descText)
-  ResetSize();
 }
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '390',
     width: '640',
-    videoId: 'dQw4w9WgXcQ',
+    videoId: 'cmkAbDUEoyA',
     playerVars: {
       'playsinline': 1
     },
