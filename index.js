@@ -1,4 +1,5 @@
-var videoFrame = null;
+var player;
+var playerElement;
 var descText = null
 var cameraId = 0;
 var cameraIntervalId = null;
@@ -7,28 +8,31 @@ var documentHeight = null;
 var documentWidth = null;
 
 function SetVideoSize() {
-  var currentCamera = cameras[cameraId];
-  var width = documentWidth;
-  var height = (currentCamera.height * documentWidth / currentCamera.width).toFixed();
-  if (height > documentHeight) {
-      height = documentHeight;
-      width = (currentCamera.width * documentHeight / currentCamera.height).toFixed();
-  }
+  // var currentCamera = cameras[cameraId];
+  // var width = documentWidth;
+  // var height = (currentCamera.height * documentWidth / currentCamera.width).toFixed();
+  // if (height > documentHeight) {
+  //     height = documentHeight;
+  //     width = (currentCamera.width * documentHeight / currentCamera.height).toFixed();
+  // }
 
-  console.log("view width:", width, " view height:", height);
+  // console.log("view width:", width, " view height:", height);
 
-  var widthValue = width.toString();
-  var heightValue = height.toString();
-  if ((videoFrame.width !== widthValue) || (videoFrame.height !== heightValue)) {
-      videoFrame.width = widthValue;
-      videoFrame.height = heightValue;
-  }
+  // var widthValue = width.toString();
+  // var heightValue = height.toString();
+  // if ((playerElement.width !== widthValue) || (playerElement.height !== heightValue)) {
+  //   playerElement.width = widthValue;
+  //   playerElement.height = heightValue;
+  // }
 }
 
 function SwitchToCamera(cameraIdToSwitch) {
   var currentCamera = cameras[cameraIdToSwitch];
   descText.innerText = "[" + currentCamera.category + "] " + currentCamera.Description
-  videoFrame.src = currentCamera.url + "?autoplay=1&mute=1";
+  const arguments = currentCamera.url.split('/')
+  console.log(arguments[arguments.length - 1])
+  player.loadVideoById(arguments[arguments.length - 1])
+  player.playVideo()
 }
 
 function SwitchToNextCamera() {
@@ -98,10 +102,38 @@ function ResetSize() {
 }
 
 window.onload = function () {
-  videoFrame = document.getElementsByTagName("iframe")[0];
+  playerElement = document.getElementById('player')
+
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
   descText = document.getElementById('descText')
   console.log(descText)
   ResetSize();
+}
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '390',
+    width: '640',
+    videoId: 'dQw4w9WgXcQ',
+    playerVars: {
+      'playsinline': 1
+    },
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+function onPlayerReady(event) {
   SwitchToCamera(cameraId);
   StartCameraLoop();
+}
+
+function onPlayerStateChange(event) {
+  console.log(event.data)
 }
