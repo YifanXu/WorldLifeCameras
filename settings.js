@@ -101,5 +101,3 @@ var cameras = [
     source: "https://www.youtube.com/watch?v=1-iS7LArMPA"
   }
 ];
-
-<iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
