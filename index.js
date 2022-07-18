@@ -102,6 +102,11 @@ function ResetSize() {
   console.log("body width:", documentWidth, " body height:", documentHeight);
 }
 
+function Start() {
+  SwitchToCamera(0);
+  StartCameraLoop();
+}
+
 window.onload = function () {
   ResetSize();
   playerElement = document.getElementById('player')
@@ -133,6 +138,7 @@ function onYouTubeIframeAPIReady() {
 function onPlayerReady(event) {
   SwitchToCamera(cameraId);
   StartCameraLoop();
+  alert("player ready")
 }
 
 function onPlayerStateChange(event) {
