@@ -81,5 +81,25 @@ var cameras = [
     width: 560,
     height: 315,
     source: "https://www.webcamtaxi.com/en/japan/tokyo/kabukicho-shinjuku-cam.html"
+  },
+  {
+    type: "Youtube",
+    category: "Landscape",
+    Description: "University of Washington, Seattle, Washington, USA",
+    url: "https://www.youtube.com/embed/xF57xr65KQY",
+    width: 560,
+    height: 315,
+    source: "https://www.livebeaches.com/webcams/university-of-washington-red-square-cam/"
+  },
+  {
+    type: "Youtube",
+    category: "Street",
+    Description: "Times Square, New York City, USA",
+    url: "https://www.youtube.com/embed/1-iS7LArMPA",
+    width: 560,
+    height: 315,
+    source: "https://www.youtube.com/watch?v=1-iS7LArMPA"
   }
 ];
+
+<iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
