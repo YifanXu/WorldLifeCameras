@@ -136,7 +136,8 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-  setTimeout(Start, 100);
+  // setTimeout(Start, 100);
+  Start();
 }
 
 function onPlayerStateChange(event) {
