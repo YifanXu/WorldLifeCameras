@@ -103,7 +103,7 @@ function ResetSize() {
 }
 
 function Start() {
-  SwitchToCamera(0);
+  SwitchToCamera(cameraId);
   StartCameraLoop();
 }
 
@@ -136,9 +136,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-  SwitchToCamera(cameraId);
-  StartCameraLoop();
-  alert("player ready")
+  setTimeout(Start, 100);
 }
 
 function onPlayerStateChange(event) {
