@@ -1,6 +1,7 @@
 var player;
 var playerElement;
 var descText = null
+var linkText = null
 var cameraId = 0;
 var cameraIntervalId = null;
 var cameraInterval = 30000;
@@ -29,9 +30,15 @@ function SetVideoSize() {
 
 function SwitchToCamera(cameraIdToSwitch) {
   var currentCamera = cameras[cameraIdToSwitch];
-  descText.innerText = "[" + currentCamera.category + "] " + currentCamera.Description
+
   const arguments = currentCamera.url.split('/')
-  player.loadVideoById(arguments[arguments.length - 1])
+  const videoId = arguments[arguments.length - 1]
+
+  descText.innerText = "[" + currentCamera.category + "] " + currentCamera.Description
+  linkText.setAttribute('href', `https://youtu.be/${videoId}`)
+  linkText.innerText = `https://youtu.be/${videoId}`
+
+  player.loadVideoById(videoId)
   player.playVideo()
 }
 
@@ -117,6 +124,7 @@ window.onload = function () {
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
   descText = document.getElementById('descText')
+  linkText = document.getElementById('videolink')
 }
 
 function onYouTubeIframeAPIReady() {
