@@ -208,5 +208,21 @@ var cameras = [
     width: 560,
     height: 315,
     source: "https://www.youtube.com/watch?v=rG13FY2ytno"
+  },
+  {
+    type: "Youtube",
+    enabled: true,
+    night_avaliable: false,
+    start_month: null,
+    end_month: null,
+    start_hour: null,
+    end_hour: null,
+    category: "Landscape",
+    timezone: 2,
+    Description: "Rolling Cam Venice Italy (威尼斯，意大利)",
+    url: "https://www.youtube.com/embed/ph1vpnYIxJk",
+    width: 560,
+    height: 315,
+    source: "https://www.youtube.com/watch?v=ph1vpnYIxJk"
   }
 ];
