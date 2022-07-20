@@ -240,8 +240,41 @@ var cameras = [
     width: 560,
     height: 315,
     source: "https://www.youtube.com/watch?v=OObOQ2GElhA"
+  },
+  {
+    type: "Youtube",
+    enabled: true,
+    night_avaliable: false,
+    start_month: null,
+    end_month: null,
+    start_hour: null,
+    end_hour: null,
+    category: "Street",
+    timezone: -8,
+    Description: "Live Walking, New York City, USA (纽约，美国)",
+    url: "https://www.youtube.com/embed/z4WeAR7tctA",
+    width: 560,
+    height: 315,
+    source: "https://www.youtube.com/watch?v=z4WeAR7tctA"
+  },
+  {
+    type: "Youtube",
+    enabled: true,
+    night_avaliable: false,
+    start_month: null,
+    end_month: null,
+    start_hour: null,
+    end_hour: null,
+    category: "Street",
+    timezone: 9,
+    Description: "Walking Around Fantastic Gangnam Streets,Seoul Korea (首尔，韩国)",
+    url: "https://www.youtube.com/embed/KHIApygKGT8",
+    width: 560,
+    height: 315,
+    source: "https://www.youtube.com/watch?v=KHIApygKGT8"
   }
 ];
+
 
 
 
