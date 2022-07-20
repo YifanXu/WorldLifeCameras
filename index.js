@@ -30,7 +30,6 @@ function SwitchToCamera(cameraIdToSwitch) {
   var currentCamera = cameras[cameraIdToSwitch];
   descText.innerText = "[" + currentCamera.category + "] " + currentCamera.Description
   const arguments = currentCamera.url.split('/')
-  console.log(arguments[arguments.length - 1])
   player.loadVideoById(arguments[arguments.length - 1])
   player.playVideo()
 }
@@ -81,9 +80,6 @@ function StartCameraLoop() {
 }
 
 function ResetSize() {
-  var body = document.body;
-  var html = document.documentElement;
-
   documentHeight = Math.max(
       document.documentElement["clientHeight"],
       document.body["scrollHeight"],
@@ -117,7 +113,6 @@ window.onload = function () {
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
   descText = document.getElementById('descText')
-  console.log(descText)
 }
 
 function onYouTubeIframeAPIReady() {
@@ -136,10 +131,9 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-  // setTimeout(Start, 100);
   Start();
 }
 
 function onPlayerStateChange(event) {
-  console.log(event.data)
+  console.log("Player state change", event.data)
 }
