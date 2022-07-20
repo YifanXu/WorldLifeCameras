@@ -192,5 +192,21 @@ var cameras = [
     width: 560,
     height: 315,
     source: "https://www.youtube.com/watch?v=gC4dJGHWwDU"
+  },
+  {
+    type: "Youtube",
+    enabled: true,
+    night_avaliable: false,
+    start_month: null,
+    end_month: null,
+    start_hour: null,
+    end_hour: null,
+    category: "Street",
+    timezone: 7,
+    Description: "Nevskiy avenue St. Petersburg Russia Anichkov Palace (圣彼得堡，俄罗斯)",
+    url: "https://www.youtube.com/embed/rG13FY2ytno",
+    width: 560,
+    height: 315,
+    source: "https://www.youtube.com/watch?v=rG13FY2ytno"
   }
 ];
