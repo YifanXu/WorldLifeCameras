@@ -224,5 +224,24 @@ var cameras = [
     width: 560,
     height: 315,
     source: "https://www.youtube.com/watch?v=ph1vpnYIxJk"
+  },
+  {
+    type: "Youtube",
+    enabled: true,
+    night_avaliable: false,
+    start_month: null,
+    end_month: null,
+    start_hour: null,
+    end_hour: null,
+    category: "Animal",
+    timezone: -8,
+    Description: "Wolong Grove Panda, SiChuan, China (卧龙熊猫基地，四川，中国)",
+    url: "https://www.youtube.com/embed/OObOQ2GElhA",
+    width: 560,
+    height: 315,
+    source: "https://www.youtube.com/watch?v=OObOQ2GElhA"
   }
 ];
+
+
+
