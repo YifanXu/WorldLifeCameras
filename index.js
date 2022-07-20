@@ -6,6 +6,7 @@ var cameraIntervalId = null;
 var cameraInterval = 30000;
 var documentHeight = null;
 var documentWidth = null;
+var currentTimeZone = null;
 
 function SetVideoSize() {
   // var currentCamera = cameras[cameraId];
@@ -104,6 +105,9 @@ function Start() {
 }
 
 window.onload = function () {
+  currentTimeZone = Math.floor(new Date().getTimezoneOffset() / 60);
+  console.log("Time Zone:", currentTimeZone);
+
   ResetSize();
   playerElement = document.getElementById('player')
 

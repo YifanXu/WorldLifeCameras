@@ -4,7 +4,8 @@ var cameras = [
   {
     type: "Youtube",
     category: "Beach",
-    Description: "Hollywood Beach, Florida, USA",
+    timezone:-6,
+    Description: "Hollywood Beach, Florida, USA (美国 弗罗里达)",
     url: "https://www.youtube.com/embed/cmkAbDUEoyA",
     width: 560,
     height: 315,
@@ -13,7 +14,8 @@ var cameras = [
   {
     type: "Youtube",
     category: "Beach",
-    Description: " Hollywood Beach Boardwalk Band Theatre, Florida, USA",
+    timezone: -6,
+    Description: " Hollywood Beach Boardwalk Band Theatre, Florida, USA (美国 弗罗里达)",
     url: "https://www.youtube.com/embed/LTqT7IRLO0c",
     width: 560,
     height: 315,
@@ -22,7 +24,8 @@ var cameras = [
   {
     type: "Youtube",
     category: "Beach",
-    Description: "Dania Beach, Florida, USA",
+    timezone: -6,
+    Description: "Dania Beach, Florida, USA (美国 弗罗里达)",
     url: "https://www.youtube.com/embed/bEoNVd3spEM",
     width: 560,
     height: 315,
@@ -31,7 +34,8 @@ var cameras = [
   {
     type: "Youtube",
     category: "Sports",
-    Description: "Kiva Dunes Kiva Dunes, Alabama, USA",
+    timezone: -6,
+    Description: "Kiva Dunes Kiva Dunes, Alabama, USA (阿拉巴马州, 美国)",
     url: "https://www.youtube.com/embed/GvbhY-EaPJg",
     width: 560,
     height: 315,
@@ -40,7 +44,8 @@ var cameras = [
   {
     type: "Youtube",
     category: "Street",
-    Description: "Masarykovo Square of Uherský Brod, Zlin Region, Czech Republic",
+    timezone: 2,
+    Description: "Masarykovo Square of Uherský Brod, Zlin Region, Czech Republic (兹林州, 捷克共和国)",
     url: "https://www.youtube.com/embed/Aq6snPCo0jM",
     width: 560,
     height: 315,
@@ -49,7 +54,8 @@ var cameras = [
   {
     type: "Youtube",
     category: "Beach",
-    Description: "Lido di Jesolo, Jesolo, Italy",
+    timezone: 2,
+    Description: "Lido di Jesolo, Jesolo, Italy. (耶索洛, 意大利)",
     url: "https://www.youtube.com/embed/c0jYVsYTcfA",
     width: 560,
     height: 315,
@@ -58,7 +64,8 @@ var cameras = [
   {
     type: "Youtube",
     category: "Landscape",
-    Description: "Pra' delle Torri Holiday Centre, Veneto, Italy",
+    timezone: 2,
+    Description: "Pra' delle Torri Holiday Centre, Veneto, Italy (威尼托大区,意大利)",
     url: "https://www.youtube.com/embed/akdW-Hf_R2Q",
     width: 560,
     height: 315,
@@ -67,7 +74,8 @@ var cameras = [
   {
     type: "Youtube",
     category: "Street",
-    Description: "Neo Karlovasi, Samos Island, Greece",
+    timezone: 3,
+    Description: "Neo Karlovasi, Samos Island, Greece (萨摩斯岛, 希腊)",
     url: "https://www.youtube.com/embed/DY0Iyprkau4",
     width: 560,
     height: 315,
@@ -76,7 +84,8 @@ var cameras = [
   {
     type: "Youtube",
     category: "Street",
-    Description: "Kabukichō Ichiban-gai Street, Shinjuku City, Tokyo, Japan",
+    timezone: 9,
+    Description: "Kabukichō Ichiban-gai Street, Shinjuku City, Tokyo, Japan (东京新宿,日本)",
     url: "https://www.youtube.com/embed/DjdUEyjx8GM",
     width: 560,
     height: 315,
@@ -85,7 +94,8 @@ var cameras = [
   {
     type: "Youtube",
     category: "Landscape",
-    Description: "University of Washington, Seattle, Washington, USA",
+    timezone: 8,
+    Description: "University of Washington, Seattle, Washington, USA (华盛顿州立大学，美国)",
     url: "https://www.youtube.com/embed/xF57xr65KQY",
     width: 560,
     height: 315,
@@ -94,7 +104,8 @@ var cameras = [
   {
     type: "Youtube",
     category: "Street",
-    Description: "Times Square, New York City, USA",
+    timezone: -4,
+    Description: "Times Square, New York City, USA (纽约时代广场，美国)",
     url: "https://www.youtube.com/embed/1-iS7LArMPA",
     width: 560,
     height: 315,
