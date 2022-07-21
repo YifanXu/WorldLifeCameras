@@ -4,16 +4,58 @@
         <script src="settings.js"></script>
         <script src="index.js"></script>
     </header>
-    <body onresize="ResetSize()">
+    <body>
         <div id="player"></div>
         <div id="cover">
             <button class="controlButton" onclick="SwitchToLastCamera()"></button>
             <button class="controlButton"onclick="ToggleCameraLoop()"></button>
-            <button class="controlButton" onclick="SwitchToNextCamera()"></button>
+            <button class="controlButton" onclick="ManualSwitchToNextCamera()"></button>
         </div>
         <div id="desc">
             <p id="descText">Description</p>
             <a id="videolink" href="">Link to video</a>
+        </div>
+        <div id="settingPanel" class="close">
+            <button id="settingPanelToggle" onclick="toggleSettingsPanel()">></button>
+            <h3>Settings</h3>
+            <form onsubmit="formsubmit(event)">
+                <div class="formRow">
+                    <label id="autoplaydelaylabel">autoplay delay</label>
+                    <input id="autoplaydelayinput" type="number" placeholder="seconds"/>
+                </div>
+                <p class="msggreen" id="autoplaydelaymessage"></p>
+            </form>
+
+            <h4>Filter by local time</h4>
+            <div class="toggleMainContainer">
+                <label class="toggleLabel">Autoplay</label>
+                <div class="toggleSubContainer">
+                    <div id="autoplaySlider" class="toggleSlider off"></div>
+                    <button class="toggleButton autoplay on"  onclick="updateSetting(event)">On</button>
+                    <button class="toggleButton autoplay off" onclick="updateSetting(event)">Off</button>
+                </div>
+            </div>
+            <div class="toggleMainContainer">
+                <label class="toggleLabel">Video Sound</label>
+                <div class="toggleSubContainer">
+                    <div id="soundSlider" class="toggleSlider off"></div>
+                    <button class="toggleButton sound on"  onclick="updateSetting(event)">On</button>
+                    <button class="toggleButton sound off" onclick="updateSetting(event)">Off</button>
+                </div>
+            </div>
+            <div class="toggleMainContainer">
+                <label class="toggleLabel">Day Only</label>
+                <div class="toggleSubContainer">
+                    <div id="dayOnlySlider" class="toggleSlider off"></div>
+                    <button class="toggleButton dayOnly on"  onclick="updateSetting(event)">On</button>
+                    <button class="toggleButton dayOnly off" onclick="updateSetting(event)">Off</button>
+                </div>
+            </div>
+
+            <h4>Filter by Category</h4>
+            <div id="categoryFilterContainer">
+                <button class="categoryButton on" id="environmentCategory" onclick="updateCategorySetting(event)">Environment</button>
+            </div>
         </div>
     </body>
 </htnml>

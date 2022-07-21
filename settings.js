@@ -202,7 +202,7 @@ var cameras = [
     start_hour: null,
     end_hour: null,
     category: "Street",
-    timezone: 7,
+    timezone: 3,
     Description: "Nevskiy avenue St. Petersburg Russia Anichkov Palace (圣彼得堡，俄罗斯)",
     url: "https://www.youtube.com/embed/rG13FY2ytno",
     width: 560,

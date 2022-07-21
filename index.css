@@ -6,6 +6,7 @@ body{
   height : 100%;
   width : 100%;
   overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 iframe {
   border: 0;
@@ -28,10 +29,6 @@ iframe {
   width: 33.3%;
   background-color: transparent;
   border: none
-}
-
-.controlButton:hover {
-/*  background-color: rgba(211, 211, 211, 0.2) */
 }
 
 #desc {
@@ -64,4 +61,154 @@ iframe {
   font-size: 10;
   line-height: 30%;
   padding-left: 10px;
+}
+
+#settingPanel {
+  position: absolute;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  background-color: rgba(211, 211, 211, 0.9)
+}
+
+#settingPanel.open {
+  left: 0;
+  transition: 300ms;
+}
+
+#settingPanel.close {
+  left: -50vw;
+  transition: 300ms;
+}
+
+#settingPanelToggle {
+  position:absolute;
+  height: 10vh;
+  width: 30px;
+  right: -30px;
+  top: 45vh;
+  border: none;
+  background-color:rgba(211, 211, 211, 0.5);
+  color:white;
+  font-size: 30;
+  text-align: center;
+}
+
+#settingPanelToggle:hover {
+  background-color:rgba(211, 211, 211, 0.5)
+}
+
+#settingPanel label {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.formRow {
+  display:flex;
+  height: 40px;
+}
+
+#autoplaydelaylabel {
+  width: 50%;
+}
+
+#autoplaydelayinput {
+  width: 50%;
+}
+
+#autoplaydelaymessage {
+  margin: 0px;
+}
+
+#autoplaydelaymessage.msggreen {
+  color:green;
+}
+
+#autoplaydelaymessage.msgred {
+  color:red;
+}
+
+.toggleMainContainer {
+  display: flex;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.toggleLabel {
+  width: 50%;
+}
+
+.toggleSubContainer {
+  position: relative;
+  width: 50%;
+  border: 3px solid gray;
+  padding: 0px;
+}
+
+.toggleButtonContainer {
+  display: flex;
+  height: 100
+}
+
+.toggleButton {
+  position: absolute;
+  background: transparent;
+  width: 50%;
+  height:100%;
+  border: none;
+  padding: 0px;
+  transition: 100ms;
+}
+
+.toggleButton.on {
+  left: 0;
+}
+
+.toggleButton.off {
+  right: 0;
+}
+
+.toggleButton:hover {
+  background-color:rgba(255,255,255,0.2);
+}
+
+.toggleSlider {
+  position:absolute;
+  width: 50%;
+  height: 100%;
+  transition-duration: 200ms;
+}
+
+.toggleSlider.on {
+  left: 0;
+  background-color: lightgreen;
+}
+
+.toggleSlider.off {
+  left: 50%;
+  background-color: pink;
+}
+
+#categoryFilterContainer {
+  display: flex;
+  flex-direction: column; 
+}
+
+.categoryButton {
+  height: 50px;
+  border: none;
+  text-align: left;
+  font-size: 25;
+  transition: 200ms;
+  border: 1px solid black;
+}
+
+.categoryButton.on {
+  background-color: lightgreen;
+}
+
+.categoryButton.off {
+  background-color: pink;
 }
